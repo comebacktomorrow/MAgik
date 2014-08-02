@@ -1,0 +1,3 @@
+CheckShell http://www.autohotkey.com/community/viewtopic.php?t=78058
+EasyWindowDrag http://www.autohotkey.com/docs/scripts/EasyWindowDrag.htm
+WindowPad http://www.autohotkey.com/board/topic/19990-windowpad-window-moving-tool/
