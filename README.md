@@ -62,6 +62,24 @@ What else can I do?
 
 Having issues with BCF4MA not connecting? If you've got MA2 as part of a network, the chance is GrandMA2 is loading before your computer has set its IP. Set it to static, that helps a bit. MAgik already has a delay in there to let windows acquire its IP. Yes, even if its static. If anyone finds a way around this, let me know! I'm confident it's a Windows configuration safeguard.
 
+How do I auto-log in.
+I won't write it up here, but this is a good starting point. http://windows.microsoft.com/en-au/windows-vista/turn-on-automatic-logon
+
+Getting Started.
+Running the raw executable won't do anything by itself, you need to pass instructions through command lind switches, hotkeys, and stored registry settings. It's designed to get itself out of the way.
+
+1)On your first run, make sure the path in the shortcut is correct. 
+2)Double click on the shortcut to run it, and quickly start pressing your Control key.
+This should bring up the autoboot gui. Select the version of MA2 you'd like to boot into. Then press default to make this your chosen version (the launch button lets you launch a different version without setting it as default). FYI: This value is stored in the registry under HKCU\Software\ShellLauncher\Default, the data being the folder name of the version you want to launch.
+
+3)Now, run the shortcut to make sure everything is working fine. By default it is setup to work with BCF4MA - either delete the command line switch for S and Q, or remove the lines from init.exe.
+
+You're now ready to set MAgik as shell.
+4)In the MAgik shortcut, copy the switches in "target", by default it is "-S True -L Start -Q Quit -U Shutdown". Now go into the extras folder and open "Set MAgik as Shell.reg". You'll see the last line has the switches at the end - if you've changed anything, replace those switches with your copied switches.
+
+5)Once you've done that, save and double click to apply the settings to the registry. Now, restart your computer. 
+Fingers crossed, it should load!
+
 User license:
 Attribution-NonCommercial 4.0 International
 http://creativecommons.org/licenses/by-nc/4.0/
