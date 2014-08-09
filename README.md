@@ -1,9 +1,5 @@
-MAgik
+MAgik - Grand MA2 Launcher
 =====
-
-Grand MA2 Launcher
-
-Instructions for MAgik
 ###About MAgik
 MAgik is a program designed to make your OnPC computer a less 'computer' and a little more 'OnPC'. Keep your computer running lean and optimised. Who needs print services! 
 
@@ -47,6 +43,9 @@ Commands:
 
 MAgik as Shell
 This is about replacing Window Explorer, start menu and the like with MAgik and GrandMA. Included is a registry key that will replace explorer.exe with a link to the MAgik shortcut you create.
+
+Boot GUI
+The boot gui gives you the abillity to select your perffered version of MA2. Select your version from the dropdown, and then press default to set it as default. Selecting launch starts a non-preffered version of MA2.
 
 Other bits:
 -------------------
