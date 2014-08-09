@@ -85,6 +85,11 @@ Got a question?
 -----------------
 Feel free to ask anything here on the MA-Share forum http://ma-share.net/forum/read.php?6,42862,42862#msg-42862
 
+Version History
+---------------
+2.0.0 Inital release
+2.0.1 Modified boot GUI to be more verbose to try and why it's not finding versions.
+
 User license:
 -------------------
 Attribution-NonCommercial 4.0 International
