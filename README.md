@@ -82,6 +82,10 @@ You're now ready to set MAgik as shell.
 5. Once you've done that, save and double click to apply the settings to the registry. Now, restart your computer. 
 Fingers crossed, it should load!
 
+Got a question?
+-----------------
+Feel free to ask anything here on the MA-Share forum http://ma-share.net/forum/read.php?6,42862,42862#msg-42862
+
 User license:
 -------------------
 Attribution-NonCommercial 4.0 International
