@@ -37,6 +37,9 @@ Watch()
 return
 
 Boot(){
+	global c
+	global crop
+	
 	;Sleep, 3000
 	if (processSwitch("S"))
 	{
@@ -46,11 +49,6 @@ Boot(){
 			startMA()
 		}
 	}
-}
-
-Load(){
-	global c
-	global crop
 
 	c := getCanvasSize()
 	if % getCanvasRecord(c) == 1
@@ -58,7 +56,9 @@ Load(){
 		setWindowPositions(c)
 		crop:= cropMode_Control("restore",1, c)
 	}
-	
+}
+
+Load(){
 	if (processSwitch("L"))
 	{
 		;MsgBox -L [Block] is the load script to be run from init.ini

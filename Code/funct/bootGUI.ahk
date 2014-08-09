@@ -29,26 +29,29 @@ for index, element in Array
 
 ;Lets create the drop down
 Gui, Add, DropDownList, vVersion, %Versions%
-Gui, Add, Button, Default gStart, Launch
+Gui, Add, Button, gStart, Launch
 Gui, Add, Button, gDefault, Default
 Gui, Show
-Return
+MsgBox, %Versions%
+Pause
+Return %Version%
 
 ; Set default startup version
 Default:
 {
-	Gui, Submit
+	GuiControlGet, Version
 	RegWrite, REG_SZ, HKEY_CURRENT_USER, Software\ShellLauncher, Default, %Version%
+	MsgBox, stored %Version% to registry
 	sleep, 2000
 }
 
 ;Start GrandMA
 Start:
 {
-	
-	RegRead, Default, HKEY_CURRENT_USER, Software\ShellLauncher, Default
-	Pause
-	return	
+	GuiControlGet, Version
+	MsgBox, calling start to %Version%
+	;RegRead, Default, HKEY_CURRENT_USER, Software\ShellLauncher, Default
+	Pause, off
 }
-return
+return %Version%
 }
