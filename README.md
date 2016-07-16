@@ -61,14 +61,14 @@ Running the raw executable won't do anything by itself first up - by design it t
 
 1. Copy MAgik (and optionally, MAGikConfig) to your "MA Lighting Technologies\grandma" folder in program files.
 2. On your first run, either quickly hold down tab to launch the config tool or .. just run the config tool.
-3. Once the config window comes up, so you need to choose some options: 
+3. Once the config window comes up, you need to choose some options: 
 - Select the version of MA2 you'd like to boot into.
 - If MA onPC should automatically start when MAgik runs (set to true).
 - What action should be taken when MA is closed while running as shell (usually shutdown, logoff is great for testing)
 - If applications should be loaded or unloaded on boot \ shutdown.
 
 - Launch selected onPC verison is for quickly changing versions of MA
-- *Store settings as default saves all the above settings*
+- **Store settings as default saves all the above settings**
 - Restore explorer as shell and set MAgik as shell define what happens when you log in.
 
 4. If you've decided to set MAgik as Shell, log out and then log back in. You shoud see MA start. Hooray!
