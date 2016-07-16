@@ -22,7 +22,7 @@ cropMode_Control(type="mode", monitor="current", px="auto", sn_canvas=0){
 				;do it for the current monitor
 				WinGetPos, dX, dY, dWidth, dHeight, grandMA2 onPC
 				monitor := GetMonitorAt(dX, dY)
-				;MsgBox, %monitor%
+				MsgBox, %monitor%
 			}
 			
 			;the width we need to be defining is for the command region
@@ -31,7 +31,7 @@ cropMode_Control(type="mode", monitor="current", px="auto", sn_canvas=0){
 				;figure out how big the command screen should be to fill the monitor based on the width of the command section
 				command_width := Mon2Right - Mon2Left
 				command_height := Mon2Bottom - Mon2Top
-				;MsgBox, Left: %Mon2Left% -- Top: %Mon2Top% -- Right: %Mon2Right% -- Bottom %Mon2Bottom%.
+				MsgBox, Left: %Mon2Left% -- Top: %Mon2Top% -- Right: %Mon2Right% -- Bottom %Mon2Bottom%.
 				type= "Automatic"
 			} else if (px=="native"){
 				command_width:= 800
@@ -41,17 +41,8 @@ cropMode_Control(type="mode", monitor="current", px="auto", sn_canvas=0){
 				type = "Manual"
 			}
 	scale_factor:= command_width/800
-	scale_factor_h:= command_height/480
-
-	if (scale_factor_h < scale_factor){
-		;MsgBox, Going Wide
-		cropMode_Move(-scale_factor_h, Mon2Left, Mon2Top)
-		cropMode_Crop(scale_factor_h)
-	} else {
-		;MsgBox, Going Tall
-		cropMode_Move(-scale_factor, Mon2Left, Mon2Top)
-		cropMode_Crop(scale_factor)
-	}
+	cropMode_Move(-scale_factor, Mon2Left, Mon2Top)
+	cropMode_Crop(scale_factor)
 	isCropped:=1
 
 	} else if (type == "restore" || mode == 3){
@@ -72,7 +63,6 @@ cropMode_Control(type="mode", monitor="current", px="auto", sn_canvas=0){
 		cropMode_Move(scale_factor, dX, dY)
 		if (dCrop == 1){
 			;this is sort of like calling simple
-			;MsgBox, calling crop
 			cropMode_Crop(scale_factor)
 		} else {
 			WinSet, Region, ,grandMA2 onPC
@@ -136,12 +126,12 @@ cropMode_Move(scale = 1, move_x=0, move_y=0){
 	}
 
 	; and move!
-	;MsgBox Moving to ... %dX% %dY% %dWidth% %dHeight%
+	MsgBox Moving to ... %dX% %dY% %dWidth% %dHeight%
 	WinMove, grandMA2 onPC,, dX, dY, dWidth, dHeight
 }
 
 cropMode_Crop(scale_factor = 1){
-	sleep, 2000
+	sleep, 1000
 	;work out pixel crop offset
 	compute_x:= 1*scale_factor
 	compute_y:= 236*scale_factor
@@ -171,4 +161,14 @@ GetMonitorAt(x, y, default=1)
             return A_Index 
     } 
     return default 
+}
+
+if (!A_IsCompiled){
+^q::
+	cropMode_Control("monitor", "current", "auto", 4487)
+return
+
+^r::
+	cropMode_Control("resetfull")
+return
 }

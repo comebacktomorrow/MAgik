@@ -2,7 +2,7 @@
 ; Shutdown: 1.x
 ; Language:       English
 ; Platform:       Vista/7
-; Author:         comebacktomorrow
+; Author:         A.N.Other <myemail@nowhere.com>
 ;
 ; Script Function:
 ;	Quit or restore the OS state
