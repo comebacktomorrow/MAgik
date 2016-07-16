@@ -19,8 +19,6 @@ I've been running it for about three years and put it through at leask weekly lo
 MAgik works from within your grandma folder in program files. From there, it knows how to discover what versions of the software you have installed.
 After you've placed it in there, run MAgik Config!
 
-*Note* Some functions require admin access. Run as Admistrator, or set Compatibility in Properties as "Run as Administrator".
-
 ##MAgik Config
 The Config GUI replaces the old switches that were somewhat confusing, even to me. You can either run the MAgik Config directly, or you can quickly press and hold down tab when booting MAgik.
 It gives you options to:
@@ -70,10 +68,11 @@ Running the raw executable won't do anything by itself first up - by design it t
 - If applications should be loaded or unloaded on boot \ shutdown.
 
 - Launch selected onPC verison is for quickly changing versions of MA
-- Store settings as default saves all the above settings
+- *Store settings as default saves all the above settings*
 - Restore explorer as shell and set MAgik as shell define what happens when you log in.
 
 4. If you've decided to set MAgik as Shell, log out and then log back in. You shoud see MA start. Hooray!
+5. Advanced: If you're also loading additional apps, you'll need to do that through init.ini. Take a look at the file to see the BCF4MA example.
 
 Version History
 ---------------
