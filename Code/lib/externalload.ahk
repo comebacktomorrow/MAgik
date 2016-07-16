@@ -43,7 +43,9 @@ externalload(switch, src) {
 				} 
 				else 
 				{
-					MsgBox I can't find %executable%
+					SplashTextOn, , , I can't find %executable%
+					Sleep, 2000
+					SplashTextOff
 				}
 			}
 		}	
