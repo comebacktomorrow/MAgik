@@ -74,6 +74,11 @@ Running the raw executable won't do anything by itself first up - by design it t
 4. If you've decided to set MAgik as Shell, log out and then log back in. You shoud see MA start. Hooray!
 5. Advanced: If you're also loading additional apps, you'll need to do that through init.ini. Take a look at the file to see the BCF4MA example.
 
+Known Issues
+--------------
+- Running as Administrator casues autoboot to boot to explorer. Under older versions of windows this seemed to cause problems with window management. This doesnt seem to be an issue with Windows 10 therefore running as Administrator can be dropped.
+- For some reason in Windows 10, we cannot write to HKLM\Software\Microsoft\Windows NT\CurrentVersion\IniFileMapping\system.ini\boot. The "Shell" key in some instances has been shown to cause autoboot not to work. As a manual work around, we can change Shell to "USR:Software\Microsoft\Windows NT\CurrentVersion\Winlogon". Generated registry patches as a fix. In Windows 8, writing to HKLM required admin elevation.
+
 Version History
 ---------------
 2.0.0 Inital release
