@@ -2,7 +2,7 @@
 ##About MAgik
 MAgik is a program designed to make your OnPC computer a less 'computer' and a little more 'OnPC'. Keep your computer running lean and optimised. Who needs print services! 
 
-I've been running it for about three years and put it through at least 300 loads in that time. For a while it stalled in development mostly because it was good enough, but there were always a few things that I wanted to tidy up.
+I've been running it for about three years and put it through at leask weekly loads all that time. For a while it stalled in development mostly because it did what it needed to, but there were always a few things that I wanted to tidy up.
 
 ###Features include:
 + A new easy config tool (MAgik Config)
@@ -56,6 +56,30 @@ What else can I do to make my computer more console like?
 + Install the Windows theme (designed for Windows 8).
 
 Having issues with BCF4MA not connecting? If you've got MA2 as part of a network, the chance is GrandMA2 is loading before your computer has set its IP. Set it to static, that helps a bit. MAgik already has a delay in there to let windows acquire its IP. Yes, even if its static. If anyone finds a way around this, let me know! I'm confident it's a Windows configuration safeguard.
+
+Getting Started.
+--------------------
+Running the raw executable won't do anything by itself first up - by design it tries not to draw attention to itself.
+
+1. Copy MAgik (and optionally, MAGikConfig) to your "MA Lighting Technologies\grandma" folder in program files.
+2. On your first run, either quickly hold down tab to launch the config tool or .. just run the config tool.
+3. Once the config window comes up, so you need to choose some options: 
+- Select the version of MA2 you'd like to boot into.
+- If MA onPC should automatically start when MAgik runs (set to true).
+- What action should be taken when MA is closed while running as shell (usually shutdown, logoff is great for testing)
+- If applications should be loaded or unloaded on boot \ shutdown.
+
+- Launch selected onPC verison is for quickly changing versions of MA
+- Store settings as default saves all the above settings
+- Restore explorer as shell and set MAgik as shell define what happens when you log in.
+
+4. If you've decided to set MAgik as Shell, log out and then log back in. You shoud see MA start. Hooray!
+
+Version History
+---------------
+2.0.0 Inital release
+2.0.1 Modified boot GUI to be more verbose to try and why it's not finding versions.
+2.2.7 New ConfigGUI tool - changed configuration to use registry instead of commmand line switches. Fixed autoboot registry settings. Experimental screen1 cropping and scaling.
 
 User license:
 Attribution-NonCommercial 4.0 International
