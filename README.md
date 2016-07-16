@@ -81,9 +81,9 @@ Known Issues
 
 Version History
 ---------------
-2.0.0 Inital release
-2.0.1 Modified boot GUI to be more verbose to try and why it's not finding versions.
-2.2.7 New ConfigGUI tool - changed configuration to use registry instead of commmand line switches. Fixed autoboot registry settings. Experimental screen1 cropping and scaling.
+- 2.0.0 Inital release
+- 2.0.1 Modified boot GUI to be more verbose to try and why it's not finding versions.
+- 2.2.7 New ConfigGUI tool - changed configuration to use registry instead of commmand line switches. Fixed autoboot registry settings. Experimental screen1 cropping and scaling.
 
 User license:
 Attribution-NonCommercial 4.0 International
