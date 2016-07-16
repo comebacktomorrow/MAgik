@@ -2,33 +2,34 @@ Instructions for MAgik
 About MAgik
 MAgik is a program designed to make your OnPC computer a less 'computer' and a little more 'OnPC'. Keep your computer running lean and optimised. Who needs print services! 
 
-I've been running it for a year and put it through at least 100 shows in that time. It's been in development for two years; it started life as a similar program designed for Martin MPC before the switch to GrandMA where it has also been living for a year. I finally managed to complete my one last key function, and have thus decided others might find it useful too.
+I've been running it for about three years and put it through at least 300 loads in that time. For a while it stalled in development mostly because it was good enough, but there were always a few things that I wanted to tidy up.
 
 Features include:
++ A new easy config tool (MAgik Config)
 + Booting right into Grand MA
-+ Storing window positions for a variety of multi-screen configurations
-+ Modifying the command screen to work nice on your tablet
-+ Auto starting programs such as BCF4MA (user configurable!)
++ Storing (Ctrl+W) and restoring (Ctrl+T) window positions for a variety of multi-screen configurations 
++ Modifying the command screen to work nice on your tablet #Improved! (Ctrl+Q, Ctrl+R) And yes, this attribute is storable! (Ctrl+W)
++ Auto starting programs such as BCF4MA (user configurable through a nifty .ini file!)
 + Restarting of programs upon software reboot
-+ Crash detection and recovery
-+ Automatic shutdown or logoff upon closure of Grand MA2
++ Crash detection and recovery (so it won't auto-shutdown)
++ User configrable automatic shutdown or logoff upon closure of Grand MA2
 + Switching between versions of OnPC
 
 How it works:
 MAgik works from within your grandma folder in program files. From there, it knows how to discover what versions of the software you have installed.
+After you've placed it in there, run MAgik Config!
 
-MAgik switches:
-The core functionality is controlled through optional command line switches that tell MAgik how to behave.
+*Note* Some functions require admin access. Run as Admistrator, or set Compatibility in Properties as "Run as Administrator".
 
-Commands:
-- S True // Start GrandMA2 when you run magik?
-- L [Start | Block] // Which set of programs do you want to run with Grand MA (See init.ini)
-- Q [Quit | Block] // Which set of programs do you want to close with Grand MA (See init.ini)
-- U [Shutdown | Logoff] //Do you wish to shutdown or logoff when you close Grand MA?*
+MAgik Config
+The Config GUI replaces the old switches that were somewhat confusing, even to me. You can either run the MAgik Config directly, or you can quickly press and hold down tab when booting MAgik.
+It gives you options to:
++ Boot a different version of MA
++ Change the "Shutdown" action
++ Choose whether to load and unload apps on launch
++ Set MAgik or Explorer as Shell
 
-A example: "C:\Program Files\MA Lighting Technologies\grandma\Magik.exe" -S True -L Start -Q Quit -U Shutdown"
-
-*Please note, the shutdown functionality only works when MAgik has been setup to run as Shell.
+*Please note, the shutdown and logoff functionality is only enabled when MAgik has been setup to run as Shell and Windows explorer \ shell is not running.
 
 MAgik hotkeys
 Once you have GrandMA and MAgik running, there are also optional window management hotkeys you can use to set up your environment to your liking. 
@@ -36,12 +37,11 @@ Once you have GrandMA and MAgik running, there are also optional window manageme
 Commands:
 + Left Windows Key - Bring GrandMA2 command window to foreground // *This only works when running as shell
 + Ctrl+W - Save window state // Magik will remember when you keep your windows when you start for any given monitor configuration.
-+ Ctrl+Q - Cycle through command cropping // This will crop your command screen to just be a command screen. There are a few different variations of it, so press it a few times.
-+ Ctrl - Version switch gui // This only works when MAgik is starting. Press it repeatedly fast!
++ Ctrl+Q - Enable Crop Mode for the command screen on its current monitor (resize so it fits inside first)
++ Ctrl+R - Disable Crop Mode
++ Ctrl+T - Restore Window Deafults
++ Tab- Version switch gui // This only works when MAgik is starting. Press it repeatedly fast!
 + Alt - Move window // Hold this down then click and drag
-
-MAgik as Shell
-This is about replacing Window Explorer, start menu and the like with MAgik and GrandMA. Included is a registry key that will replace explorer.exe with a link to the MAgik shortcut you create.
 
 Other bits:
 
@@ -50,7 +50,7 @@ You can always press Ctrl-Alt-Delete. I contemplated putting a nicer GUI in for 
 
 If you want to minimize the risk of this happening, just work on getting your configuration right prior to setting it up as shell.
 
-What else can I do?
+What else can I do to make my computer more console like?
 + Enable auto-login for Windows. Google it.
 + Disable non-essential services.
 + Install the Windows theme (designed for Windows 8).
@@ -63,4 +63,4 @@ http://creativecommons.org/licenses/by-nc/4.0/
 http://creativecommons.org/licenses/by-nc/4.0/legalcode
 
 Made in Queensland, Australia. 
-Â© 2014 comebacktomorrow
+© 2016 David Tilley
